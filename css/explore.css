@@ -1,0 +1,226 @@
+
+.hero{
+    text-align: center;
+    padding: 80px 40px;
+    background: url('https://barbaralicious.com/wp-content/uploads/2020/01/Reiher-Red-Lotus-Lake-2.jpg') no-repeat center center/cover;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    z-index: 1;
+}
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+    background: var(--color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p {
+    font-size: 22px;
+    color: #f8fafc;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px;
+    background: var(--bg-color);
+}
+
+.controls input,
+.controls select{
+    width: 300px;
+    color: #000;
+}
+
+.controls input::placeholder {
+    color: #000;
+    opacity: 0.7;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card h3{
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--text-main);
+}
+.card p {
+    color: var(--text-muted);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    color: var(--text-main);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--text-muted);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--accent-cyan);
+}
+
+#modalTitle {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#modalDesc {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.modal-content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-cyan);
+    font-size: 20px;
+}
+
+#modalAttractions {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+#modalAttractions li {
+    margin-bottom: 5px;
+}
+
+
+.cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.cost-table th, .cost-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.cost-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.cost-table td {
+    color: var(--text-muted);
+}
+
+.cost-table tr:hover td {
+    background: rgba(137, 207, 240, 0.05);
+}
+
+
+@media(max-width: 768px){
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    .controls input, .controls select {
+        width: 100%;
+        max-width: 300px;
+    }
+}

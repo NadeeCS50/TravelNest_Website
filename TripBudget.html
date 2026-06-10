@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest - Budget Planner</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/TripBudget.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <h2>TravelNest</h2>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Travel Budget Planner</h1>
+
+        <p>Estimate your travel expenses easily</p>
+
+    </section>
+
+
+    <section class="budget-container">
+
+        <div class="budget-card">
+
+            <h2>Plan Your Budget</h2>
+
+            <input type="text" id="countryInput" list="countryList" placeholder="Enter Your Destination">
+            <datalist id="countryList"></datalist>
+
+            <input type="number" id="days" placeholder="Number of days">
+
+            <input type="number" id="dailyBudget" placeholder="Daily budget ($)">
+
+            <button onclick="calculateBudget()">
+                Calculate Budget
+            </button>
+
+            <div class="result" id="resultBox">
+
+                <h3 id="totalBudget"></h3>
+                <h4 id="budgetStatus" class="budget-status"></h4>
+
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-fill"></div>
+                </div>
+
+                <div id="placesBox">
+                    <h4>Places to Visit</h4>
+                    <ul id="placesList"></ul>
+                </div>
+
+                <button class="secondary-btn save-budget-btn" id="saveBudgetBtn" onclick="saveBudget()">Save Trip Budget</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="saved-budgets-section">
+        <h2>Saved Budgets</h2>
+        <div id="savedBudgetsList" class="saved-budgets-list"></div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+
+    <script src="js/data.js"></script>
+
+    <script src="js/TripBudget.js"></script>
+
+</body>
+
+</html>

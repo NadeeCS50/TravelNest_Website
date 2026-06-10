@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest - Trip Generator</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/TripGen.css">
+</head>
+
+<body>
+
+
+
+    <nav>
+        <h2>TravelNest</h2>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section class="hero">
+
+        <h1> Let's Generate Your Trip </h1>
+
+        <p>
+            Generate your perfect travel destination instantly
+        </p>
+
+    </section>
+
+
+
+    <section class="generator-container">
+
+        <div class="generator-card">
+
+            <h2>Find Your Dream Destination</h2>
+
+            <select id="tripType">
+                <option value="">Select Trip Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="cultural">Cultural</option>
+                <option value="nature">Nature</option>
+            </select>
+
+            <button onclick="generateTrip()" id="generateBtn">
+                Surprise Me
+            </button>
+
+            <div class="result" id="tripResult">
+
+                <h3 id="tripName"></h3>
+
+                <p id="tripText"></p>
+
+                <p id="tripBudget" class="budget-range"></p>
+
+                <img id="tripImage" src="images/placeholder.jpg" alt="Trip Destination">
+
+                <h4>Places to Visit</h4>
+                <ul id="placesList"></ul>
+
+                <button onclick="saveToWishlist()" id="wishlistBtn" class="wishlist-btn">Save to Wishlist</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="wishlist-section">
+        <h2>Your Saved Wishlist</h2>
+        <div id="wishlistItems" class="wishlist-grid"></div>
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+    <script src="js/TripGen.js"></script>
+
+</body>
+
+</html>

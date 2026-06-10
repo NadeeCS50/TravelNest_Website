@@ -1,0 +1,300 @@
+
+.hero{
+    text-align: center;
+    padding: 80px 40px;
+    background: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a') no-repeat center center/cover;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    z-index: 1;
+}
+
+.hero h1, .hero p, .sound-controls-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+    background: var(--color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+    font-size: 22px;
+    color: #f8fafc;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.mood-container{
+    display: flex;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.mood-card{
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.moodselectbgcolor {
+    background-color: #fff;
+}
+
+.mood-card h2{
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+.mood-inputs-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.mood-inputs-row select {
+    flex: 1;
+    max-width: 350px;
+    margin: 0;
+    color: black;
+}
+
+.mood-inputs-row button {
+    flex: 1;
+    max-width: 250px;
+    margin: 0;
+}
+
+.result{
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.mood-results-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.mood-result-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mood-result-card.selected {
+    border-color: var(--color-primary, #06b6d4);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    background: rgba(6, 182, 212, 0.1);
+}
+
+.mood-result-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.mood-result-card h3 {
+    color: var(--accent-cyan);
+    font-size: 20px;
+    margin: 12px 15px 6px;
+}
+
+.mood-result-card p {
+    color: var(--text-muted);
+    margin: 0 15px 15px;
+    font-size: 14px;
+}
+
+.action-buttons {
+    display: none;
+    margin-top: 20px;
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.action-buttons .secondary-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    background: transparent;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    box-shadow: none;
+    transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.action-buttons .secondary-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(6, 182, 212, 0.1);
+    box-shadow: none;
+}
+
+.action-buttons #pauseAudioBtn {
+    flex: 1 1 0;
+    max-width: none;
+    margin: 0;
+}
+
+.travel-lists-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.travel-list.mood-info-card {
+    width: 300px;
+    text-align: left;
+}
+
+.travel-list h3 {
+    text-align: center;
+}
+
+.travel-list ul {
+    list-style-position: inside;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+.moods{
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--bg-color);
+}
+
+.moods h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.mood-info-card{
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    border-radius: 16px;
+    width: 250px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+
+.mood-info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.mood-info-card h3{
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.mood-info-card p{
+    color: var(--text-muted);
+}
+
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    flex: 2;
+}
+
+#pauseAudioBtn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.secondary-btn:hover {
+    background: rgba(6, 182, 212, 0.1);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.travel-list ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.saved-destination-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.saved-destination-label {
+    flex: 1;
+}
+
+.remove-destination-btn {
+    border: none;
+    background: transparent;
+    color: var(--accent-cyan);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.remove-destination-btn:hover {
+    background: rgba(6, 182, 212, 0.08);
+}

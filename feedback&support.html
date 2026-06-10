@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest - Feedback</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/feedback&support.css">
+</head>
+
+<body>
+
+
+
+    <nav>
+        <h2>TravelNest</h2>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section class="hero">
+
+        <h1>We Value Your Feedback</h1>
+
+        <p>
+            Help us improve your TravelNest experience
+        </p>
+
+    </section>
+
+
+
+    <section class="feedback-container">
+
+        <div class="feedback-card">
+
+            <h2>Send Feedback</h2>
+
+            <input type="text" id="name" placeholder="Your Name">
+
+            <input type="email" id="email" placeholder="Your Email">
+
+            <select id="rating">
+                <option value="">Rate Your Experience</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+
+            <textarea id="message" placeholder="Write your feedback here..." rows="5"></textarea>
+
+            <button onclick="submitFeedback()">
+                Submit Feedback
+            </button>
+
+            <p id="successMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">How do I use the Trip Generator? <span class="icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Simply navigate to the Trip Generator page, select your preferences, and let our algorithm
+                        suggest the best destinations for you!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is my budget data saved? <span class="icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Yes, your budget entries are securely saved locally on your device so you can pick up right where
+                        you left off.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How can I contact support? <span class="icon">+</span></button>
+                <div class="faq-answer">
+                    <p>You can use the feedback form above to send us any inquiries or feedback. We value your input!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+    <script src="js/feedback&support.js"></script>
+
+</body>
+
+</html>

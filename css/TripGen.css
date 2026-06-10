@@ -1,0 +1,217 @@
+
+.hero{
+    text-align: center;
+    padding: 80px 40px;
+    background: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05') no-repeat center center/cover;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.7);
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+    background: var(--color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+    font-size: 22px;
+    color: #f8fafc;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.generator-container{
+    display: flex;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.generator-card{
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 40px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.generator-card h2{
+    margin-bottom: 25px;
+}
+
+.generator-card select{
+    width: 100%;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.generator-card button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.result{
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(76, 2, 249, 0.3);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.result h3{
+    color: var(--accent-violet);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.result p{
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.budget-range {
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+
+.result h4 {
+    color: var(--accent-cyan);
+    margin: 20px 0 10px;
+    font-size: 16px;
+}
+
+.result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result li {
+    color: var(--text-muted);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.result li:last-child {
+    border-bottom: none;
+}
+
+.result img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+#generateBtn {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.wishlist-btn {
+    margin-top: 20px;
+    background: var(--color-primary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.wishlist-btn:disabled {
+    background: var(--color-primary) !important;
+    cursor: default;
+}
+
+.wishlist-section {
+    padding: 60px 40px;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.wishlist-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.wishlist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wishlist-item {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.wishlist-item h4 {
+    color: var(--accent-cyan);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.wishlist-item p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.remove-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.remove-btn:hover {
+    background: #0284c7; 
+}

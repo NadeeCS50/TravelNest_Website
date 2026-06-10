@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest - Explorer</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <h2>TravelNest</h2>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+        <h1>Destination Explorer</h1>
+        <p>Search and discover amazing places around the world</p>
+    </section>
+
+
+    <section class="controls">
+
+        <input type="text" id="searchInput" placeholder="Search destination...">
+
+        <select id="regionFilter">
+            <option value="all">All Continents</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Africa">Africa</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+
+    </section>
+
+
+    <section class="grid" id="destinationGrid"></section>
+
+
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Destination Name</h2>
+            <p id="modalDesc">Destination description goes here.</p>
+
+            <h3>Popular Attractions</h3>
+            <ul id="modalAttractions">
+
+            </ul>
+
+            <h3>Travel Cost Comparison</h3>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Estimated Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="modalCosts">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+
+    <script src="js/data.js"></script>
+
+    <script src="js/explore.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelNest</title>
+
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <h2>TravelNest</h2>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <div class="hero-text glass-box">
+                <h1>Chase New Horizons</h1>
+                <p>Turn your travel dreams into reality with TravelNest</p>
+                <a href="explore.html" class="explore-btn">Start Exploring</a>
+            </div>
+            <img src="https://i1-e.pinimg.com/1200x/f3/31/03/f331031ae9d6f0d149ff91c4abc5d541.jpg" alt="Travel">
+        </div>
+
+    </section>
+
+
+    <section class="quote">
+        <h2 id="quote">Life is either a daring adventure or nothing at all — Helen Keller</h2>
+    </section>
+
+
+    <section class="destination">
+        <div class="section-heading">
+            <h2>Destination of the Day</h2>
+        </div>
+
+        <div class="destination-card glass-box">
+            <img id="destination-image"
+                src="https://www.goatsontheroad.com/wp-content/uploads/2019/08/lovina-beach-bali.jpg" alt="Destination">
+            <div class="destination-info">
+                <h3 id="destination-name">Bali, Indonesia</h3>
+                <p id="destination-text">Beautiful beaches and relaxing vibes.</p>
+                <a href="explore.html" class="explore-btn">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+
+    <script src="js/data.js"></script>
+
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

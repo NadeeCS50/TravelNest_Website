@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest - Travel Mood</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/TravelMood.css">
+</head>
+
+<body>
+
+
+
+    <nav>
+
+        <h2>TravelNest</h2>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explorer</a></li>
+            <li><a href="TripBudget.html">Budget</a></li>
+            <li><a href="TripGen.html">Trip Generator</a></li>
+            <li><a href="TravelMood.html">Travel Mood</a></li>
+            <li><a href="feedback&support.html">Feedback & Support</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section class="hero">
+        <h1>Travel Mood Matcher</h1>
+
+        <p>
+            Select your mood and discover your perfect destination
+        </p>
+
+
+
+    </section>
+
+
+    <section class="mood-container">
+
+        <div class="mood-card">
+
+            <h2>How Are You Feeling Today?</h2>
+
+            <div class="mood-inputs-row">
+                <select class="moodselectbgcolor" id="moodSelect">
+                    <option value="">Choose Your Mood</option>
+                    <option value="relaxed">Relaxed</option>
+                    <option value="excited">Excited</option>
+                    <option value="romantic">Romantic</option>
+                    <option value="adventurous">Adventurous</option>
+                </select>
+
+                <button onclick="findDestination()">
+                    Find Destination
+                </button>
+            </div>
+
+            <div class="result" id="moodResult">
+
+                <div id="moodResults" class="mood-results-grid"></div>
+
+                <div class="action-buttons" id="actionButtons">
+                    <button class="secondary-btn" onclick="saveDestinationStatus('visited')">Mark as Visited</button>
+                    <button class="secondary-btn" onclick="saveDestinationStatus('planned')">Mark as Planned</button>
+                    <button class="secondary-btn" id="pauseAudioBtn" onclick="togglePauseAudio()">Pause Audio 🔊</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="travel-list-section moods">
+        <h2>My Travel List</h2>
+        <div class="travel-lists-container">
+
+            <div class="travel-list mood-info-card">
+                <h3>Visited</h3>
+                <ul id="visitedList">
+                </ul>
+            </div>
+
+            <div class="travel-list mood-info-card">
+                <h3>Planned</h3>
+                <ul id="plannedList">
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>TravelNest</h2>
+                <p>Plan your dream vacation, explore the world, and create unforgettable memories with us.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explorer</a></li>
+                    <li><a href="TripBudget.html">Budget</a></li>
+                    <li><a href="TripGen.html">Trip Generator</a></li>
+                    <li><a href="TravelMood.html">Travel Mood</a></li>
+                    <li><a href="feedback&support.html">Feedback & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Subscribe To Newsletter</h3>
+                <p>Get the latest travel updates and offers.</p>
+                <form onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="footerEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/global.js"></script>
+
+    <script src="js/TravelMood.js"></script>
+
+</body>
+
+</html>
